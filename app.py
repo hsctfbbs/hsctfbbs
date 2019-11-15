@@ -9,7 +9,7 @@ from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 
 admin_username = "hsctfadmin"
-admin_password = "K~nQpqpHC2hA'K7h"
+admin_password = ""
 
 flag = "HSCTF{dummyflag}"
 if os.path.exists('flag.txt'):
