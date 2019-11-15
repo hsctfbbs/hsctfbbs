@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>profile</title>
+    </head>
+    <body>
+        profile
+        <hr />
+        username: {{ user.username }}
+        {% if user.id == -1 %}
+        <br />
+        flag: {{ flag }}
+        {% endif %}
+        <hr />
+        <a href="/">top</a>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>hsctfbbs</title>
+    </head>
+    <body>
+        <a href="/profile">{{ username }}</a>: welcome to hsctfbbs
+        <hr />
+        create thread:
+        <form method="POST" action="/mkthread">
+            <input type="text" name="title" value="" />
+            <input type="submit" name="title" value="create thread" >
+        </form>
+        <hr />
+        threads:
+        <ul>
+            {% for thread in threads %}
+            <li><a href="/thread/{{ thread.id }}">{{ thread.title }}</a> {{ thread.date }} created by {{ thread.username }}</li>
+            {% endfor %}
+        </ul>
+        <hr />
+        <a href="/logout">logout</a>
+    </body>
+</html>

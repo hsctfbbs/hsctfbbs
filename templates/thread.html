@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>hsctfbbs: {{ thread.title }}</title>
+    </head>
+    <style>
+    td {
+        border: 2px solid #ccc;
+        vertical-align: top;
+    }
+    </style>
+    <body>
+        {{ thread.title }}
+        <hr />
+        messages:
+        {% if messages.count() == 0 %}
+        no messages
+        {% else %}
+        <table>
+            {% for message in messages %}
+            <tr>
+                <td>{{ message.username}}<br >{{ message.date }}</td>
+                <td width=100%><pre>{{ message.message }}</pre></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+        <hr />
+        post message:
+        <form method="POST" action="/post/{{ thread.id }}">
+            <textarea cols=80 rows=5 name="message"></textarea>
+            <br />
+            <input type="submit" name="title" value="post" >
+        </form>
+        <hr />
+        <a href="/">top</a>
+    </body>
+</html>

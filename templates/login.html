@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>login</title>
+    </head>
+    <body>
+        login
+        <hr />
+        <p>{{ message }}</p>
+        <form method="POST" action="/login">
+            username: <input type="text" name="username" value="" /> <br />
+            password: <input type="password" name="password" value="" /> <br />
+            <input type="submit" name="login" value="login" />
+        </form>
+        <hr />
+        <a href="/register">register</a>
+    </body>
+</html>

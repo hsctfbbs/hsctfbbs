@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>create thread</title>
+    </head>
+    <body>
+        create thread
+        <hr />
+        <p>{{ message }}</p>
+        {% if thread %}
+         Go <p><a href="/thread/{{ thread.id }}">{{ thread.title }}</a></p>
+        {% endif %}
+        <hr />
+        <a href="/">top</a>
+    </body>
+</html>

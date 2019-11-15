@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>post</title>
+    </head>
+    <body>
+        post
+        <hr />
+        <p>{{ message }}</p>
+        <hr />
+        {% if thread %}
+        return to thread: <a href="/thread/{{ thread.id }}">{{ thread.title }}</a>
+        {% else %}
+        <a href="/">top</a>
+        {% endif %}
+    </body>
+</html>

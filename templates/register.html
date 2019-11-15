@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>register</title>
+    </head>
+    <body>
+        user registration
+        <hr />
+        <p>{{ message }}</p>
+        {% if form: %}
+        <form method="POST" action="/register">
+            username: <input type="text" name="username" value="" /> <br />
+            password: <input type="password" name="password" value="" /> <br />
+            <input type="submit" name="register" value="register" />
+        </form>
+        <hr />
+        {% endif %}
+        <a href="/">top</a>
+    </body>
+</html>

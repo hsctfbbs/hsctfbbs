@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  hsctfbbs:
+    environment:
+      TZ: Asia/Tokyo
+    build: .
+    ports:
+      - 13894:13894
